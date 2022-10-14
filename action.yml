@@ -13,6 +13,7 @@ runs:
     - name: Checkout Alfalfa
       uses: actions/checkout@v3
       with:
+        repository: 'NREL/alfalfa'
         ref: 'develop'
         path: 'alfalfa/'
     - run: cd alfalfa
