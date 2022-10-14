@@ -16,9 +16,7 @@ runs:
         repository: 'NREL/alfalfa'
         ref: 'develop'
         path: 'alfalfa/'
-    - run: cd alfalfa
-      shell: bash
-    - run: export VERSION_TAG=${{ inputs.tag }}
-      shell: bash
-    - run: docker compose -f alfalfa/docker-compose.yml up --no-recreate -d --scale worker=${{ inputs.worker-scale }}
+    - run: |
+    export VERSION_TAG=${{ inputs.tag }}
+    docker compose -f alfalfa/docker-compose.yml run --no-recreate -d --scale worker=${{ inputs.worker-scale }}
       shell: bash
