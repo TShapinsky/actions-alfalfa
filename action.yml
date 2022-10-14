@@ -18,6 +18,10 @@ runs:
         path: 'alfalfa/'
     - run: cd alfalfa
       shell: bash
+    - run: ls
+      shell: bash
+    - run: pwd
+      shell: bash
     - run: export VERSION_TAG=${{ inputs.tag }}
       shell: bash
     - run: docker compose up -d --scale worker=${{ inputs.worker-scale }}
