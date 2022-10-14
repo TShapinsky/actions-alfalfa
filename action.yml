@@ -20,5 +20,5 @@ runs:
       shell: bash
     - run: export VERSION_TAG=${{ inputs.tag }}
       shell: bash
-    - run: docker compose up -f alfalfa/docker-compose.yml -d --scale worker=${{ inputs.worker-scale }}
+    - run: docker compose -f alfalfa/docker-compose.yml up -d --scale worker=${{ inputs.worker-scale }}
       shell: bash
