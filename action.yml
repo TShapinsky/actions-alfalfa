@@ -15,4 +15,6 @@ runs:
       with:
         ref: 'develop'
     - run: export VERSION_TAG=${{ inputs.tag }}
+      shell: bash
     - run: docker compose up -d --scale worker=${{ inputs.worker-scale }}
+      shell: bash
