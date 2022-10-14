@@ -18,5 +18,5 @@ runs:
         path: 'alfalfa/'
     - run: |
         export VERSION_TAG=${{ inputs.tag }}
-        docker compose -f alfalfa/docker-compose.yml run --no-recreate -d --scale worker=${{ inputs.worker-scale }}
+        docker compose -f alfalfa/docker-compose.yml up --no-recreate -d --scale worker=${{ inputs.worker-scale }}
       shell: bash
