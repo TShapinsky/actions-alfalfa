@@ -7,6 +7,9 @@ inputs:
   worker-scale:
     description: 'number of worker to run'
     default: '1'
+  compose-file-ref:
+    description: 'Alfalfa repository ref where compose file can be found'
+    default: 'develop'
 runs:
   using: "composite"
   steps:
@@ -14,7 +17,7 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: 'NREL/alfalfa'
-        ref: 'develop'
+        ref: ${{ inputs.compose-file-ref }}
         path: 'alfalfa/'
     - run: |
         export VERSION_TAG=${{ inputs.tag }}
