@@ -2,7 +2,7 @@ name: 'Alfalfa'
 description: 'Run an instance of Alfalfa'
 inputs:
   tag:
-    description: 'Docker image tag for pulling alfalfa containers'
+    description: 'Docker image tag for pulling Alfalfa containers'
     default: 'develop'
   worker-scale:
     description: 'Number of workers to run'
