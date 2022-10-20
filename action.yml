@@ -2,10 +2,10 @@ name: 'Alfalfa'
 description: 'Run an instance of Alfalfa'
 inputs:
   tag:
-    description: 'tag for pulling alfalfa containers'
+    description: 'Docker image tag for pulling alfalfa containers'
     default: 'develop'
   worker-scale:
-    description: 'number of worker to run'
+    description: 'Number of workers to run'
     default: '1'
   compose-file-ref:
     description: 'Alfalfa repository ref where compose file can be found'
